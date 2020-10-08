@@ -26,7 +26,6 @@ public class Vehiculo {
 		obj2.Anio = 2010;
 		obj2.Revoluciones=0;
 		
-		
 		obj1.encender();
 		obj1.acelerar();
 		obj1.acelerar();
@@ -37,23 +36,19 @@ public class Vehiculo {
 		obj1.estado();
 		obj2.estado();
 		
-		//GET obtener los valores
-		//SET insertar nuevos valores 
+		obj1.acelerar();
+		obj1.estado();
+		obj1.apagar();
+		obj1.estado();
+		
+		
 	}
 	
-	
-	// 1. acceso [public, private, protected]
-	// 2. opcional static
-	// 3. tipo de método [void = vacio, int, String , float, Double ]
 	public void encender() {
 		
 		this.setRevoluciones(1000);
 		System.out.println(this.getMarca() + " Está encendido" );
-		
-	
-		/*System.out.println("Hola");
-		System.out.println("8392983928");
-		System.out.println("Hola" + 9209320);*/
+
 	}
 
 	public void acelerar() {
@@ -61,8 +56,10 @@ public class Vehiculo {
 	}
 	
 	public void estado() {
+		System.out.println("____________________");
+		System.out.println(this.Marca);
 		System.out.println("R/s: " + this.getRevoluciones() );
-		
+		System.out.println("____________________");
 	}
 	
 	
@@ -107,7 +104,10 @@ public class Vehiculo {
 		Revoluciones = revoluciones;
 	}
 	
-	
+	public void apagar() {
+		this.setRevoluciones(0);
+		this.setVelocidad(0);
+	}
 	
 
 }
