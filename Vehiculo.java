@@ -26,6 +26,14 @@ public class Vehiculo {
 		obj2.Anio = 2010;
 		obj2.Revoluciones=0;
 		
+		
+		Vehiculo tercerObj = new Vehiculo();
+		tercerObj.Marca = "Nissan";
+		tercerObj.Color = "Negro";
+		tercerObj.Velocidad=0;
+		tercerObj.Anio = 2016;
+		tercerObj.Revoluciones =0;
+		
 		obj1.encender();
 		obj1.acelerar();
 		obj1.acelerar();
@@ -41,6 +49,11 @@ public class Vehiculo {
 		obj1.apagar();
 		obj1.estado();
 		
+		
+		tercerObj.encender();
+		tercerObj.acelerar();
+		tercerObj.acelerar();
+		tercerObj.estado();
 		
 	}
 	
