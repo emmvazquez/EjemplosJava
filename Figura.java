@@ -1,4 +1,3 @@
-
 public class Figura {
 private int numeroLados;
 private Double l1;
@@ -14,12 +13,33 @@ private Double l3;
 		// TODO Auto-generated method stub
 		Figura obj = new Figura();
 		obj.setNumeroLados(5);
+		obj.setL1(3.5);
 		obj.queFiguraEs();
+		obj.elPerimetroEs();
+		
 		
 		Figura obj2 = new Figura();
 		obj2.setNumeroLados(4);
-		obj2.queFiguraEs();		
+		obj2.setL1(56.3);
+		obj2.setL2(10.0);
+		obj2.queFiguraEs();
+		obj2.elPerimetroEs();
 		
+	}
+	
+	public void elPerimetroEs() {
+		Double perimetro= 0.0;
+		//if(     l1 != l2        )
+		if(this.getNumeroLados()==4) {
+			if(this.getL1()!=this.getL2()) {
+				perimetro = (this.getL1() * 2) + (this.getL2()*2);
+						//  ( l1 * 2      )    + (         l2 * 2)
+			}
+		}
+		else {
+			perimetro = this.getNumeroLados()*this.getL1();
+		}	
+		System.out.println("El perímetro es : " + perimetro);
 	}
 	
 	public void queFiguraEs() {
@@ -75,8 +95,6 @@ private Double l3;
 	public void setL3(Double l3) {
 		this.l3 = l3;
 	}
-	
-	
-	
+
 
 }
