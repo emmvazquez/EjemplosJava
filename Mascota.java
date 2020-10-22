@@ -11,11 +11,16 @@ private String nombre;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Mascota Tuf = new Mascota();
-		Tuf.setEdad(0);
 		Tuf.setNombre("Tuf");
+		Tuf.nacio();
 		Tuf.cumpleAnios();
 		Tuf.cumpleAnios();
 		
+	}
+	
+	public void nacio() {
+		this.setEdad(0);
+		System.out.println(this.getNombre() + " nació");
 	}
 
 	public void cumpleAnios() {
