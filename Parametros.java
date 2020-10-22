@@ -15,12 +15,21 @@ private int contador;
 		obj.setContador(0);
 		obj.pasoItem(obj.getItem());
 		obj.pasoItem("Item");
-		
-		
+		obj.pasoItem("Emmanuel" + "Vázquez");
 	}
 	
 	public void pasoItem(String i) {
-		System.out.println("Recibí " + i);
+		
+		int x = this.aumentaContador();
+		System.out.println("Recibí " + i 
+						+ "el valor del contador es " +
+						x);
+		
+	}
+	
+	public int aumentaContador() {
+		this.setContador(this.getContador() + 1);
+		return this.getContador();
 	}
 
 	public String getItem() {
